@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+<head>
+    <script>
+        var toggle=false;
+        function openMenu(){
+            toggle=true;
+            document.getElementById("myMenu").style.width = "225px";
+            document.getElementById("main").style.marginLeft = "225px";
+        }
+        function closeMenu(){
+            toggle=false;
+            document.getElementById("myMenu").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        function rotateLines(x){
+            x.classList.toggle("change");
+            if(toggle==false){
+            openMenu();
+            }
+            else{
+            closeMenu();
+            }
+        }
+    </script>
+    <link rel="StyleSheet" href="index.css">
+</head>
+<body>
+    <div id="main">
+    <!-- serves as the menu button with animation -->
+    <div class="menuButton" onclick="rotateLines(this)">
+        <div class = "bar1"></div>
+        <div class = "bar2"></div>
+        <div class = "bar3"></div>
+    </div>
+    <div class="profile">
+        <img class="img-responsive" src="Shelb_pic.jpg" width="150" height="150"> <br />
+        <w1 class="name">   Shelby Drabant <br /> </w1>
+        <w1 class="occupation"> Recent Grad Software Development <br /> </w1>
+        <w1 class="location">Bothell, WA</w1>
+    </div>
+    </div>
+    
+    <div id="myMenu" class="menu">
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <a href="mailto:drabants@gmail.com"><li>Email</li></a>
+            <a href="https://github.com/Drabants"><li>Github</li></a>
+            <a href="Shelby_Drabant_2016.docx"><li>Resume</li></a>
+        </ul>
+    </div>
+
+    
+</body>
+
+</html>

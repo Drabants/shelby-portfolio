@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+<head>
+    <script>
+        var toggle=false;
+        function openMenu(){
+            toggle=true;
+            document.getElementById("myMenu").style.width = "225px";
+            document.getElementById("main").style.marginLeft = "225px";
+        }
+        function closeMenu(){
+            toggle=false;
+            document.getElementById("myMenu").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+        function rotateLines(x){
+            x.classList.toggle("change");
+            if(toggle==false){
+            openMenu();
+            }
+            else{
+            closeMenu();
+            }
+        }
+    </script>
+    <link rel="StyleSheet" href="about.css">
+</head>
+<body>
+    <div id="main">
+    <!-- serves as the menu button with animation -->
+    <div class="menuButton" onclick="rotateLines(this)">
+        <div class = "bar1"></div>
+        <div class = "bar2"></div>
+        <div class = "bar3"></div>
+    </div>
+    <div class="profile">
+        <img src="Shelb_pic.jpg" width="150" height="150"> <br />
+        <w1 class="name">   Shelby Drabant <br /> </w1>
+    </div>
+                <p>I'm a recent graduate from The University of Washington Bothell's graduate certificate program in software engineering. I've spent my summer traveling a bit and visiting family and I'm now looking forward to finding an entry level position as a junior software developer. Originally I set out to work in the medical field and attained a bachelor's in Biological Sciences from the University of Nevada, Las Vegas. After aquiring my undergraduate degree, I realised that my passion for the medical field never really developed and I really just enjoyed the sciences. It took a year of self reflection and I decided to pursue a career in the one thing I've always enjoyed... computers! So here I am now, I've moved myself to Seattle where there are numerous opportunities in hopes that I can grow my career as a software developer. In my spare time I also work on making video games. I'm currently working on Mop Master (it's as exciting as it sounds) in order to build a strong foundation for future projects.</p>
+    </div>
+    
+    
+    <div id="myMenu" class="menu">
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <a href="mailto:drabants@gmail.com"><li>Email</li></a>
+            <a href="https://github.com/Drabants"><li>Github</li></a>
+            <a href="Shelby_Drabant_2016.docx"><li>Resume</li></a>
+        </ul>
+    </div>
+
+    
+</body>
+
+</html>
