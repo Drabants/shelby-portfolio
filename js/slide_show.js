@@ -28,3 +28,13 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
 }
+
+    $(document).scroll(function(){
+        if ($(this).scrollTop()>50){
+            // animate fixed div to small size:
+            $('.hero-section').stop().animate({ height: 0 , 'padding-top': 20},0);
+        } else {
+            //  animate fixed div to original size
+            $('.hero-section').stop().animate({ height: 0, 'padding-top': 0},0);
+        }
+    }); 
