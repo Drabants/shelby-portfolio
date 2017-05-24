@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
@@ -35,45 +36,44 @@
     </div>
   </nav>
 
-  <div class="hero-section container-fluid"></div>
-  <div class="main-section container-fluid">
-    <div id= "binaryBites"   class="clouds"><img id="test" src= "js/B_cloud.png"></div>
-    <div id= "oldPortfolio" class="clouds"><img src= "js/P_cloud.png"  ></div>
-    <div id= "masterMind" class="clouds"><img src= "js/M_cloud.png"  ></div>
-    <div id= "cipher" class="clouds" ><img src= "js/C_cloud.png"  ></div>
+  <div class="hero-section container-fluid"> <img class="centered-and-cropped"  src="4222017173552.jpg" > <img id="arrow" onclick="draw()" src="css/down.png"></div>
+    <div class="main-section container-fluid">
+        <img id="back_arrow" onclick="draw()" src="css/down.png">
+        <div id= "binaryBites"   class="clouds"><a href="https://binary-bites.herokuapp.com/"><img id="test" src= "js/B_cloud.png"></a></div>
+        <div id= "oldPortfolio" class="clouds"><a href="webpage_4.0/index.html"><img src= "js/P_cloud.png"  ></a></div>
+        <div id= "masterMind" class="clouds"><a class="link" href ="https://my-master-mind.herokuapp.com/"><img src= "js/M_cloud.png"  ></a></div>
+        <div id= "cipher" class="clouds" ><a class="link" href ="https://ceasar-ciph.herokuapp.com/"><img src= "js/C_cloud.png"  ></a></div>
     </div>
 
     
-        <script src="js/slide_show.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/slide_show.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
     $(function(){
     $('.hero-section').data('size','big');
 });
 
-$(window).scroll(function(){
-    if($(document).scrollTop() > 0)
-    {
+function draw(){
         if($('.hero-section').data('size') == 'big')
         {
             $('.hero-section').data('size','small');
             $('.hero-section').stop().animate({
-                height:'80px'
+                height:'5%'
             },4000);
         }
-    }
+    
     else
     {
         if($('.hero-section').data('size') == 'small')
         {
             $('.hero-section').data('size','big');
             $('.hero-section').stop().animate({
-                height:'1000px'
+                height:'100%'
             },5000);
         }  
     }
-});
+};
 function startClouds(){
     var cloudArray = new Array();
     cloudArray.push(document.getElementById("binaryBites"));
@@ -81,25 +81,32 @@ function startClouds(){
     cloudArray.push(document.getElementById("cipher"));
     cloudArray.push(document.getElementById("oldPortfolio"));
     setCloudSpace(cloudArray);
-    for(i=0; i<cloudArray.length; i++){
-        bounceClouds(cloudArray[i], 20);
-    }
 };
-
+window.addEventListener('resize', function(event){
+  startClouds();
+});
 function setCloudSpace(cloudArray){
+    if($(window).width() > 400){
     for(i=0; i<cloudArray.length; i++){
-    yPos = (Math.random()*300) +200
-    xPos = (Math.random()*1500) +1
+    yPos = (Math.random()*300) +200;
+    xPos = (Math.random()*(200)) +(300*(i+1));
     cloudArray[i].style.top= yPos+"px";
     cloudArray[i].style.left= xPos+"px";
-    cloudArray[i].style.width= 500+"px";
-    cloudArray[i].style.height= 300+"px";
+    }
+  //  cloudArray[i].style.width= 500+"px";
+  //  cloudArray[i].style.height= 300+"px";
  //   cloudArray[i].style.border= "1px #CCC solid";
     }    
+            else{
+                for(i=0; i<cloudArray.length; i++){
+    yPos = (Math.random()*10)+(100*(i+1));
+    xPos = (Math.random()*(200)) +(10*(i+1));
+    cloudArray[i].style.top= yPos+"px";
+    cloudArray[i].style.left= xPos+"px";
+                }
+            
+        }
 };
 
-function bounceClouds(targetElement, speed){
-    $(targetElement).effect('bounce',500);
-};
     </script>
 </body>
