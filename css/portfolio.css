@@ -25,9 +25,35 @@ body{
 
     z-index: 1;
     position:absolute;
-  animation-name: example;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.centered-and-cropped{
+    border-radius: 120%;
+    height:200px;
+    width:200px;
+    position: absolute;
+    top: 0; bottom:0; left: 0; right:0;
+    margin: auto;
+    }
+#arrow{
+    position: absolute;
+    top: 80%; bottom:0; left: 0; right:0;
+    margin: auto;
+    height:100px;
+    width:100px;
+    cursor: pointer;
+    
+}
+#back_arrow{
+    position: absolute;
+    top: 12%; left:0; right:0; 
+    margin:inherit;
+    transform: rotate(180deg);
+    height:50px;
+    width:50px;
+    cursor: pointer;
 }
 .navbar {
   position: fixed;
@@ -55,13 +81,14 @@ body{
 .hero-section {
     z-index: 2;
     width:100%;
-    height:1000px;
+    height:100%;
     position:fixed;
-  background-image: url("curtain.png");
+  background-image: url("curtain_long.png");
+    overflow: hidden;
     
 }
 .main-section{
-    height:1080px;
+    height:100%;
     background-image: url("back_clouds.png");
     background-attachment: fixed;
   background-repeat: no-repeat;
@@ -204,17 +231,28 @@ body{
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: 400px) {
+    body{
+        height:700px;
+        width:400px;
+    }
+    .main-section{
+        height: 100%;
+        width: 100%;
+    }
   .navbar {
     padding-bottom: 10px;
   }
+
   .hero-section {
-    height: 500px;
-    background-image: url("back_pic.png");
+
+    height: 100%;
+    width: 100%;
     background-position: -58px -1px;
     background-size: auto;
     background-repeat: no-repeat;
   }
+
   .nav-section {
     margin-right: 0px;
     margin-left: 0px;

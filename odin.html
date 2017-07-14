@@ -35,12 +35,68 @@
     </div>
   </nav>
     <div class="main-section container-fluid row">
-      <div class="col-md-1"></div>
-      <button type="button" class="col-md-4 col-xs-12"> <a class="link" href ="https://ceasar-ciph.herokuapp.com/"> Ceasar Cipher </a> </button>
-      <div class ="col-md-2"></div>
-      <button type="button" class="col-md-4 col-xs-12"> <a class="link" href ="https://my-master-mind.herokuapp.com/"> MasterMind </a> </button>
+      <div class = "col-xs-12"id="title"><h1 >The Odin Project</h1></div>
+    <div class= "col-xs-12">
+      <p id="odin-description">The Odin Project is a free online curriculum that teaches users how to become a web developer. I found it a useful tool and really enjoyed the projects it presented throughout the course work. For more information please click <a href="https://www.theodinproject.com/" target="about_blank">"here"</a>. Below are some of the projects I have completed while traversing their curriculum.</p>
+            </div>
     </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <div id="project-section"class="container-fluid row">
+        <div id="grid-containter">
+            <a href="https://drabants.github.io/google_remake/">
+            <div class="card-grid"> 
+                <div class="front"> 
+                    <h1>Google Remake</h1>
+                    <img src="google.png">
+                </div> 
+                <div class="back">
+                    <p>This is a simple remake of the google front page. The primary purpose of this exercise was to practice basic css and html.</p>
+                </div>  
+            </div>
+            </a>
+            <a href="https://drabants.github.io/pixel_draw/">
+            <div class="card-grid"> 
+                <div class="front"> 
+                    <h1>Pixel Drawer</h1>
+                    <img src="pix_draw.png">
+                </div> 
+                <div class="back">
+                    <p>In this task you are asked to create a pixel drawing board in order to better understand Javascript and Jquery.</p>
+                </div>  
+            </div>
+            </a>
+            <a href="https://my-master-mind.herokuapp.com/">
+            <div class="card-grid"> 
+                <div class="front"> 
+                    <h1>Master Mind</h1>
+                    <img src="master.png">
+                </div> 
+                <div class="back">
+                    <p>Master Mind is a game where the user must guess numbers until the right sequence is found. It was implemented using Ruby.</p>
+                </div>  
+            </div>
+            </a>
+            <a href="https://ceasar-ciph.herokuapp.com/">
+            <div class="card-grid"> 
+                <div class="front"> 
+                    <h1>Caesar Cipher</h1>
+                    <img src="caesar.png">
+                </div> 
+                <div class="back">
+                    <p>This is a simple Caesar Cipher made using Ruby. The main focus was on Heroku deployment</p>
+                </div>  
+            </div>
+            </a>
+     </div>
     
-    </body>
+
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+  <script src="js/odin.js"></script>
+  <script>$("#card").flip();</script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+    </div>
+</body>
+</html>

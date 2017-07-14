@@ -1,3 +1,4 @@
+/*
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -38,3 +39,60 @@ function showSlides() {
             $('.hero-section').stop().animate({ height: 0, 'padding-top': 0},0);
         }
     }); 
+*/
+$(function(){
+    $('.hero-section').data('size','big');
+});
+
+function draw(){
+        if($('.hero-section').data('size') == 'big')
+        {
+            $('.hero-section').data('size','small');
+            $('.hero-section').stop().animate({
+                height:'5%'
+            },4000);
+        }
+    
+    else
+    {
+        if($('.hero-section').data('size') == 'small')
+        {
+            $('.hero-section').data('size','big');
+            $('.hero-section').stop().animate({
+                height:'100%'
+            },5000);
+        }  
+    }
+};
+function startClouds(){
+    var cloudArray = new Array();
+    cloudArray.push(document.getElementById("binaryBites"));
+    cloudArray.push(document.getElementById("cipher"));
+    cloudArray.push(document.getElementById("oldPortfolio"));
+    setCloudSpace(cloudArray);
+};
+window.addEventListener('resize', function(event){
+  startClouds();
+});
+function setCloudSpace(cloudArray){
+    if($(window).width() > 400){
+    for(i=0; i<cloudArray.length; i++){
+    yPos = (Math.random()*300) +200;
+    xPos = (Math.random()*(200)) +(300*(i+1));
+    cloudArray[i].style.top= yPos+"px";
+    cloudArray[i].style.left= xPos+"px";
+    }
+  //  cloudArray[i].style.width= 500+"px";
+  //  cloudArray[i].style.height= 300+"px";
+ //   cloudArray[i].style.border= "1px #CCC solid";
+    }    
+            else{
+                for(i=0; i<cloudArray.length; i++){
+    yPos = (Math.random()*10)+(100*(i+1));
+    xPos = (Math.random()*(200)) +(10*(i+1));
+    cloudArray[i].style.top= yPos+"px";
+    cloudArray[i].style.left= xPos+"px";
+                }
+            
+        }
+};
