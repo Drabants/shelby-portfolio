@@ -7,40 +7,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <title>Shelby Drabant | Software Development</title>
-    <!-- custom CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/portfolio.css" rel="stylesheet">
 </head>
 
-<body onload="startClouds()">
+<body>
     <nav class="navbar navbar-right navbar-static-top">
     <div class="container-fluid">
-    <div class= "navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-    </button>
-      <a class="navbar-brand" href="#"><img class="nav-brand" src="Logo.png" width="238">
-      </a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right" role="navigation" >
-          <li><a class="nav-link" href="index.html">Home</a></li>
-          <li><a class="nav-link" href="https://github.com/Drabants">Github</a></li>
-          <li><a class="nav-link" href="mailto:drabants@gmail.com">Email</a></li>
-          <li><a class="nav-link" href="Shelby_resume_2017.pdf">Resume</a></li>
-      </ul>
-     </div>
+        <div class= "navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+              <a class="navbar-brand" href="#"><img class="nav-brand" src="Logo.png" width="238"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right" role="navigation" >
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="https://github.com/Drabants">Github</a></li>
+              <li><a class="nav-link" href="mailto:drabants@gmail.com">Email</a></li>
+              <li><a class="nav-link" href="Shelby_resume_2017.pdf">Resume</a></li>
+          </ul>
+         </div>
     </div>
   </nav>
-
   <div class="hero-section container-fluid"> <img class="centered-and-cropped"  src="4222017173552.jpg" > <img id="arrow" onclick="draw()" src="css/down.png"></div>
-    <div class="main-section container-fluid wrap">
+    <div class="container-fluid">
+    <div class = "row">
+    <div class="main-section container-fluid ">
         <img id="back_arrow" onclick="draw()" src="css/down.png">
          <h1 class="name" data-text="Hi, my name is Shelby Drabant. <br><br> 
-I'm a recent graduate from The University of Washington Bothell's graduate certificate program in software engineering. Since graduating, I've explored numerous languages and embarked on projects to help grow my skillset. <br><br>Currently most of my projects have involved HTML/CSS/JavaScript and Ruby on Rails. I've really enjoyed constructing highly functional websites using Ruby on Rails. <br><br>In my spare time, I attempt to make video games in the Unity Engine. My current project involves a drunk cube trying to stumble home before he is caught by police cubes... <br><br>I might be limited by my artistic abilities."></h1>
+                                     I'm a recent graduate from The University of Washington Bothell's graduate certificate program in software engineering. Since graduating, I've explored numerous languages and developed projects to help grow my skillset. <br><br>
+                                     Currently most of my projects have involved HTML, CSS, JavaScript and Ruby on Rails. I've really enjoyed how quickly a website can be prototyped on Ruby on Rails with high functionality. <br><br>
+                                     In my spare time, I make video games in the Unity Engine. My current project involves a drunk cube trying to stumble home before it is caught by police cubes... I might be limited by my artistic abilities.">
+        </h1>
     </div>
+    </div>
+    <div class="row">
+    <div class="project-section container-fluid col-xs-12">
+
+        <h1>Some Things I've Worked On</h1>
+        <a class="project-link" href="index.html">
+        <div class="jumbotron jumbotron-fluid col-xs-12  col-md-2 col-md-offset-1"><img src="binary_bites.png"><br>Binary Bites</div></a>
+        <div class="jumbotron jumbotron-fluid col-xs-12  col-md-2 col-md-offset-2"><a class="project-link"><img src="odin_project.png"><br>The Odin Project</a></div>
+        <div class="jumbotron jumbotron-fluid col-xs-12  col-md-2 col-md-offset-2"><a class="project-link"><img src="old_portfolio.png"><br>My Old Portfolio</a></div>
+
+    </div>
+    </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/slide_show.js"></script>
