@@ -1,0 +1,130 @@
+html { 
+  background: no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+        background-color:#262A33;
+        flex:1;
+}
+
+#wrapper {
+	font-family: Michroma;
+	font-size: 23px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+
+/* Sidebar */
+#sidebar-wrapper {
+        color:#262A33;
+    z-index: 1;
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    overflow-y: hidden;
+    background:#3FB4C6;
+    opacity: 0.9;
+    transition:.4s;
+}
+
+
+.sidebar-nav {
+    list-style: none;
+    padding: .5em .5em .5em .8em;
+    text-decoration: none;
+    font-size:125%;
+    display:block;
+    transition: .3s;
+}
+
+.sidebar-nav a:link, a:visited{
+    text-decoration:none;
+    line-height: 3;
+}
+
+.sidebar-nav a:hover{
+    color:#CCCCCC;
+}
+/* main page content*/
+#page-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color:#45C8DC;
+    transition: .4s;
+
+}
+.text-center{
+    padding:15%;
+    line-height:150%;
+}
+#name{
+    font-size: 1.5em;
+    color:#CCCCCC;
+    font-weight: bold;
+}
+.img-thumbnail{
+    background:#3FB4C6;
+    border:#3FB4C6;
+    border-radius: 60px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #CCCCCC;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    -webkit-transform : rotate(-180deg) scale(1, .75) translate(-4px);
+    transform: rotate(-180deg)scale(.75, 1) translate(-4px);
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) ;
+    transform: rotate(45deg) ;
+}
+
+
+@media(max-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.change {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.change #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #page-content{
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
