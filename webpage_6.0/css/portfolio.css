@@ -60,13 +60,24 @@ h1, h2, h3{
     padding: 5%;
     background-color:#61E793;
     text-align: center;
+    position:relative;
 }
-.poo{
-    margin:20px;
+.project-section h1{
+    margin:50px;
+}
+.project-section h3{
+    font-size:2rem;
+}
+
+.jumbotron {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
 }
 .jumbotron  img{
-    padding:20px;
-
+    padding:5%;
+}
+.jumbotron:hover{
+  box-shadow: 3px 4px 5px 5px rgba(0, 0, 0, 0.75);
+  transition: box-shadow .8s;
 }
 
 /*navigation bar styles*/

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shelby Drabant | Software Development</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+            <a href="index.html"><li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <a href="mailto:drabants@gmail.com"><li>Email</li></a>
+            <a href="https://desolate-crag-39956.herokuapp.com/">Food Blog</a>
+            <a href="https://github.com/Drabants"><li>Github</li></a>
+            <a href="Shelby_resume_2017.pdf"><li>Resume</li></a>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">                    
+                   <div class = "bar1"></div>
+                    <div class = "bar2"></div>
+                    <div class = "bar3"></div></a>
+                        <div class="text-center">
+                     <img class="img-thumbnail img-responsive" src="Shelby_3.jpg" width="200";height="200" ;
+                             onmouseover="this.src='Hover_2.jpg'; "
+                             onmouseout="this.src='Shelby_3.jpg';"> <br />
+                        <w1 id="name">Shelby Drabant<br /></w1>
+                        <w1> Recent Grad Software Development <br /> </w1>
+                        <w1>Bothell, WA</w1> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>

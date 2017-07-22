@@ -6,6 +6,7 @@ $(function(){
 function draw(){
     if($('.hero-section').data('size') == 'big')
     {
+        window.scrollTo(0,0);
         $('.hero-section').data('size','small');
         $('.hero-section').stop().animate({
             height:'5%'
