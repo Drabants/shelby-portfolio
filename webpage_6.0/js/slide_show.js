@@ -56,7 +56,7 @@ function typeWriter(text, n, loc) {
     n++;
     setTimeout(function() {
       typeWriter(text, n, loc)
-    }, 1);
+    }, 20);
   }else{
       $('.main-section').css({"height":"100%"});
       console.log('DONE');
