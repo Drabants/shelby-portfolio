@@ -4,6 +4,9 @@ body{
     vertical-align: top;
     line-height: 0px;
 }
+#name{
+    color:#333;
+}
 .centered-and-cropped{
     border-radius: 120%;
     height:200px;
