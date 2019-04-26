@@ -3131,3 +3131,7 @@ input, select, textarea {
 		border: 1px solid black;
 		z-index: 1;
 	}
+
+	.projectlink{
+		text-decoration: none; !important
+	}
