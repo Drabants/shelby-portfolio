@@ -85,7 +85,7 @@ input, select, textarea {
 	html {
 		background-color: #313a3d;
 		background-attachment: fixed,						fixed;
-		background-image: url("../../images/bg.jpg"), url("../../images/nikolay-tarashchenko-1327023-unsplash.jpg");
+		background-image: url("../../images/bg.jpg"), url("../../images/mainbg.jpg");
 		background-position: top left,					center center;
 		background-repeat: repeat,						none;
 		background-size: auto,						cover;
@@ -3117,4 +3117,17 @@ input, select, textarea {
 					padding: 0;
 				}
 
+	}
+
+	.parent{
+		position: relative;
+	}
+	.top{
+		height: 100%;
+		opacity: .5;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border: 1px solid black;
+		z-index: 1;
 	}

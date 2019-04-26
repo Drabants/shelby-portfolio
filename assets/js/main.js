@@ -153,11 +153,9 @@
 
 			// Create bg and append it to body.
 				$bg = $('<div class="main-bg" id="' + $this.attr('id') + '-bg"></div>')
-					.css('background-image', (
-						'url("assets/css/images/overlay.png"), url("' + $primaryImg.attr('src') + '")'
-					))
-					.appendTo($body);
-
+					.css('background-image', ('url("images/bg.jpg"), url("' + $primaryImg.attr('src') + '")'))
+					$bg.css(		'background-blend-mode', 'darken')
+				$bg.appendTo($body);
 			// Scrollex.
 				$this.scrollex({
 					mode: 'middle',
